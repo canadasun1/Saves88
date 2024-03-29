@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SaveMoney</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cssfiles/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        
+        :root {
+            --background-color: #ffffff;
+            --text-color: #000;
+            --primary-color:  #6c757d;
+            --secondary-color: #6c757d;
+            --accent-color: #007bff;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 20px;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .grid-container {
+            display: grid;
+            gap: 20px;
+            grid-template-areas:
+                'header'
+                'main'
+                'footer';
+        }
+
+        @media screen and (min-width: 768px) {
+            .grid-container {
+                grid-template-columns:  1fr;
+                grid-template-areas:
+                    'header'
+                    'main'
+                    'footer';
+            }
+            
+        img {
+    max-width: 100%;
+    height: auto;
+}
+
+        .item {
+            padding: 20px;
+            background-color: #78e5aa;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+        }
+
+        .item1 { grid-area: header; }
+            .item3 { grid-area: main;}
+         .item5 { grid-area: footer; }
+
+        header, footer {
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .auth-buttons button, .forgot-password {
+            padding: 3px 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: var(--accent-color);
+            color: #ffffff;
+        }
+
+        .auth-buttons button:hover, .forgot-password:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+            
+            
+.container {
+            max-width: 768px;
+            margin: auto;
+            background: #b2dec6;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: var(--primary-color);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+        }
+
+            
+            
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    
+    
+    <div class="item item5">
+        <nav class="navbar">
+            <div class="logo">
+                
+                
+             
+    <a href=  "hero.html">
+        <img src= "image/saveslogo.JPG" alt="Cool Logo" width="70" height="50">
+    </a>
+
+            </div>
+            <div class="language-select">
+                <select>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="yo">Yoruba</option>
+                    <option value="ha">Hausa</option>
+                    <option value="fr">French</option>
+                  
+                </select>
+            </div>
+            
+            
+           <ul class="nav-links">
+   <li><a href=  "index.html">Home</a></li>
+    <li><a href="aboutus.html">About US</a></li> <!-- Corrected -->
+    <li><a href=  "services.html">Services</a></li> 
+    <li><a href="contactus.html">Contact US</a></li>
+     <li><a href=  "faq.html">FAQs</a></li>
+</ul>
+          <img src= "image/contactus.PNG"height="100px"width="100px">
+        </nav>
+    </div>
+    
+    
+    <div class="item item3">
+        <div class="container">
+        
+            
+            <header>
+            <h1>Contact Us</h1>
+            
+            <p>Fill the form below or contact us through our social media platforms.</p>
+        </header>
+
+        <form id="contact-form" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="tel">Tel:</label>
+                <input type="tel" id="tel" name="tel" pattern="[0-9]{10}" required title="Ten digits code">
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="file">Upload File:</label>
+                <input type="file" id="file" name="file">
+            </div>
+            <button type="submit" class="submit-btn">Send</button>
+        </form>
+            
+            
+            
+  
+
+<script src= "jsfiles/contactus.js"></script>
+
+</body>
+</html>

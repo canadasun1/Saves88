@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SaveMoney</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="cssfiles/style.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000;
+    --primary-color: #6c757d;
+    --secondary-color: #6c757d; /* Consider if you really need this as it's the same as primary-color */
+    --accent-color: #007bff;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 20px;
+    max-width: 80%;
+    margin: auto;
+}
+
+.grid-container,
+.service-marketplace {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: auto;
+   
+}
+
+.grid-container {
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+
+.item {
+    padding: 20px;
+    background-color: #78e5aa;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+header, footer {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.service-listing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.service-provider-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.service-info h3, .service-listing h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+}
+
+.description, .rating {
+    color: #666;
+}
+
+.rating {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.service-toggle button {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.service-toggle button.blue {
+    background-color: #007bff;
+}
+
+.service-toggle button.red {
+    background-color: #dc3545;
+}
+
+.service-toggle button:hover {
+    opacity: 0.8;
+}
+
+.service-toggle button.active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+    .service-listing {
+        flex-direction: column;
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 10px auto; /* Center align the listings */
+    }
+}
+
+
+/* For added elements */
+select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+}
+        table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+}
+
+    </style>
+</head>
+    <body>
+
+    
+   
+    
+   <div class="grid-container">
+    <div class="item item1">
+        <header>
+            <h1>How Save$ Works</h1>
+            <p>Start saving or offering your affordable services with ease.</p>
+        </header>
+        
+        <div class="service-toggle">
+            <button id="seekServiceBtn" class="button blue">Service Request</button>
+            <button id="offerServiceBtn" class="button red">Offer Services</button>
+        </div>
+        <div id="serviceForm">
+            <!-- Placeholder for Dynamically Loaded Form -->
+        </div>
+    </div>
+    <div class="item item3">
+        <div class="service-marketplace">
+    <select id="category-filter" aria-label="Filter services by category">
+        <option value="all">All Categories</option>
+        <option value="cleaning">Cleaning</option>
+        <option value="tutoring">Tutoring</option>
+        <option value="gardening">Gardening</option>
+        <option value="plumbing">Plumbing</option>
+        <!-- Additional categories -->
+    </select>
+
+    <h2>Marketplace Listings</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Service Name</th>
+                <th>Offered By</th>
+                <th>Discount</th>
+                <th>Schedule</th>
+                <th>Location</th>
+                <th>Experience</th>
+                <th>Rating</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Residential Cleaning</td>
+                <td>Jane Doe</td>
+                <td>20%</td>
+                <td>Flexible</td>
+                <td>Downtown</td>
+                <td>5 years</td>
+                <td>★★★★☆</td>
+                <td>A comprehensive cleaning service for your home. Save 20% every session.</td>
+            </tr>
+            <!-- More rows can be added here -->
+        </tbody>
+    </table>
+</div>
+
+        
+        <script>
+  // Ensure the DOM is fully loaded before executing the script
+  document.addEventListener('DOMContentLoaded', function() {
+    // Cache DOM elements for later use
+    const seekServiceBtn = document.getElementById('seekServiceBtn');
+    const offerServiceBtn = document.getElementById('offerServiceBtn');
+    const serviceListings = document.querySelectorAll('.service-listing');
+
+    // Event listener for the Service Request button
+    seekServiceBtn.addEventListener('click', function(event) {
+        // Prevent default action, if necessary
+        event.preventDefault();
+        // Navigate to the request form page
+        location.href = 'requestform.html';
+    });
+
+    // Event listener for the Offer Services button
+    offerServiceBtn.addEventListener('click', function(event) {
+        // Prevent default action, if necessary
+        event.preventDefault();
+        // Navigate to the offer form page
+        location.href = 'offerform.html';
+    });
+
+    // Add click event listeners to each service listing for toggling details
+    serviceListings.forEach(item => {
+        item.addEventListener('click', function() {
+            toggleDetails(item);
+        });
+    });
+});
+
+// Function to toggle the visibility of service details
+function toggleDetails(listItem) {
+    // Find the .service-info element within the clicked list item
+    const info = listItem.querySelector('.service-info');
+    // Toggle the display property to show or hide the details
+    info.style.display = info.style.display === 'none' || !info.style.display ? 'block' : 'none';
+}
+</script>
+
+
+</script>
+    </body>

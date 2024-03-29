@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SaveMoney</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cssfiles/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        
+        :root {
+            --background-color: #ffffff;
+            --text-color: #000;
+            --primary-color:  #6c757d;
+            --secondary-color: #6c757d;
+            --accent-color: #007bff;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 20px;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .grid-container {
+            display: grid;
+            gap: 20px;
+            grid-template-areas:
+                'header'
+                'main'
+                'footer';
+        }
+
+        @media screen and (min-width: 768px) {
+            .grid-container {
+                grid-template-columns:  1fr;
+                grid-template-areas:
+                    'header'
+                    'main'
+                    'footer';
+            }
+            
+        img {
+    max-width: 100%;
+    height: auto;
+}
+
+        .item {
+            padding: 20px;
+            background-color: #78e5aa;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+        }
+            
+             .item3 {
+            padding: 20px;
+            background-color: #b2dec6;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+        }
+
+        .item1 { grid-area: header; }
+            .item3 { grid-area: main;}
+         .item5 { grid-area: footer; }
+
+        header, footer {
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .auth-buttons button, .forgot-password {
+            padding: 3px 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: var(--accent-color);
+            color: #ffffff;
+        }
+
+        .auth-buttons button:hover, .forgot-password:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+            
+            
+            .container {
+    max-width: 768px;
+    margin: auto;
+    background: #b2dec6;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+            
+            header, .about-section, .team-section, footer {
+    margin-bottom: 20px;
+}
+
+header h1, .about-section h2, .team-section h2 {
+    color: var(--primary-color);
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.team-member {
+    margin: 10px;
+    text-align: center;
+}
+            
+            
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    
+    
+    <div class="item item5">
+        <nav class="navbar">
+            <div class="logo">
+                
+                
+             
+    <a href=  "hero.html">
+        <img src= "image/saveslogo.JPG" alt="Cool Logo" width="70" height="50">
+    </a>
+
+            </div>
+            <div class="language-select">
+                <select>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="yo">Yoruba</option>
+                    <option value="ha">Hausa</option>
+                    <option value="fr">French</option>
+                  
+                </select>
+            </div>
+           <ul class="nav-links">
+   <li><a href=  "index.html">Home</a></li>
+    <li><a href=  "services.html">Services</a></li>
+    <li><a href="contactus.html">Contact US</a></li> 
+     <li><a href=  "faq.html">FAQs</a></li>
+               
+          <img src=  "image/plntconnect.PNG"height="100px"width="100px">
+        
+    </div>
+    </nav>
+    
+    <div class="item item3">
+        <div class="container">
+        <header>
+            <h1>About Save$</h1>
+            <p>Your guide to understanding who we are and what we do.</p>
+        </header>
+        
+        <section class="about-section">
+            <h2>Our Mission</h2>
+            <p>At Save$, we embody the essence of minimalism, not only in our design but in our philosophy: to simplify the way people access and offer services. Our mission is to foster a community where affordability meets quality, breaking down financial barriers that often restrict access to necessary services. By connecting individuals who seek to minimize costs with those offering competitively priced services, we aim to create a space where saving money is not just an option but a standard. Our commitment lies in empowering our users to make informed choices, promoting a culture of support and sustainability where everyone can thrive.</p>
+        </section>
+        
+        <section class="about-section">
+            <h2>What We Do</h2>
+            <p>Save$ operates at the intersection of simplicity and efficiency. Our marketplace website is a testament to the power of minimalism, providing a streamlined platform where users can easily connect based on their need to save or offer services at a more affordable rate. Whether it's a haircut, home repair, or any other service, Save$ brings together those willing to provide services at a reduced cost with those in search of more economical alternatives. By encouraging competitive pricing, we not only help individuals save money but also cultivate a community of service providers who are willing to adapt their offerings to meet the needs of others. At Save$, we believe that less can indeed be more, especially when it comes to making services accessible to all.</p>
+        </section>
+        
+        <section class="team-section">
+            <h2>Meet the Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src= "image/team1.png" alt="Team Member 1" style="width:100%">
+                    <h3>Isei Ayeni</h3>
+                    <p>Founder & CEO</p>
+                </div>
+                <div class="team-member">
+                    <img src= "image/team2.jpg" alt="Team Member 2" style="width:100%">
+                    <h3>Emerald Ajilete</h3>
+                    <p>Chief Operations Officer</p>
+                </div>
+                <!-- Add more team members as needed -->
+            </div>
+        </section>
+            
+           
+           
+     
+<script src= "jsfiles/aboutus.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SaveMoney</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cssfiles/style.css">
+    <style>
+        :root {
+            --background-color: #ffffff;
+            --text-color: #000;
+            --primary-color: #ffffff;
+            --secondary-color: #6c757d;
+            --accent-color: #007bff;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 20px;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .grid-container {
+            display: grid;
+            gap: 20px;
+            grid-template-areas:
+                'header'
+                'main'
+                'extra'
+                'footer';
+        }
+
+        @media screen and (min-width: 768px) {
+            .grid-container {
+                grid-template-columns: 2fr 1fr;
+                grid-template-areas:
+                    'header header'
+                    'main extra'
+                    'footer footer';
+            }
+            
+        img {
+    max-width: 100%;
+    height: auto;
+}
+
+        .item {
+            padding: 20px;
+            background-color:  #78e5aa;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+        }
+
+        .item1 { grid-area: header; }
+        .item3 { grid-area: main; }
+        .item4 { grid-area: extra; background-color:#b2dec6; }
+        .item5 { grid-area: footer; }
+
+        header, footer {
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+   .auth-buttons button, .auth-buttons a.signup-btn {
+    padding: 10px 20px; /* Adjusted padding for a better visual */
+    border: none;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff; /* Original blue */
+    color: #ffffff;
+    text-decoration: none; /* Remove underline from links */
+    display: inline-block; /* Ensure link behaves like a button */
+}
+        }
+
+        .auth-buttons button:hover, .signup-btn  {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+            /* Hover styles for both buttons */
+.auth-buttons .auth-btn {
+    padding: 10px 20px; /* Adjusted padding for a better visual */
+    border: none;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff; /* Original blue */
+    color: #ffffff;
+    text-decoration: none; /* Remove underline from links */
+    display: inline-block; /* Ensure link behaves like a button */
+}
+
+.auth-buttons .auth-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+             
+          
+            
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="item item1">
+        <nav class="navbar">
+            <div class="logo">
+                
+                
+             
+    <a href=   "index.html">
+        <img src= "image/saveslogo.JPG" alt="Cool Logo" width="70" height="50">
+    </a>
+
+            </div>
+            <div class="language-select">
+                <select>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="yo">Yoruba</option>
+                    <option value="ha">Hausa</option>
+                    <option value="fr">French</option>
+                    <option value="edo">Edo</option>
+                    <option value="jm">Jamaican</option>
+                </select>
+            </div>
+            <ul class="nav-links">
+                <li><a href=  "index.html">Home</a></li>
+                <li><a href= "aboutus.html">About Us</a></li>
+                <li><a href=  "services.html">Services</a></li>
+                <li><a href= "contactus.html">Contact Us</a></li>
+                <li><a href=  "faq.html">FAQs</a></li>
+            </ul>
+            
+<div class="auth-buttons">
+    <button class="auth-btn login-btn" onclick="location.href='login.html'">Login</button>
+    <button class="auth-btn signup-btn" onclick="location.href='signup.html'">Signup</button>
+</div>
+        </nav>
+    </div>
+    
+   
+    
+    
+    <div class="item item3">
+        <div class="hero-section">
+    <h1>Join the Save$ Community</h1>
+    <p>Discover a world where services meet affordability. Connect, share, and save together.</p>
+   <a href="services.html" class="cta-button-link">
+    <button class="cta-button">Get Started</button>
+</a><br>
+            
+            <img src="image/Screenshts.jpg" alt="Screenshot Example">
+    <!-- Assuming the image is placed below as per your instruction -->
+</div>
+        
+    </div>
+    
+    
+        
+         <div class="item item4">
+  <div class="main-grid">
+    <div class="search-grid">
+      <div class="input-group">
+        <input type="text" class="search-input" placeholder="Enter keyword" aria-label="Search services"/>
+        <span class="input-icon"><i class="fas fa-search"></i></span>
+      </div>
+      
+      <form id="locationForm" class="location-form">
+        <div class="form-group">
+          <label for="countrySelect">Country:</label>
+          <select id="countrySelect" name="country" aria-label="Select country" class="select-style">
+            <option value="">Select a country</option>
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="stateSelect">State/Province:</label>
+          <select id="stateSelect" name="state" aria-label="Select state" class="select-style">
+            <option value="">Select a state</option>
+            <!-- States will be dynamically loaded based on the country selection -->
+          </select>
+            
+            
+            
+        </div>
+
+        <div class="form-group">
+          <label for="citySelect">City:</label>
+          <select id="citySelect" name="city" aria-label="Select city" class="select-style">
+            <option value="">Select a city</option>
+            <!-- Cities will be dynamically loaded based on the state selection -->
+          </select>
+        </div>
+        <button class="search-btn" aria-label="Search">Search</button><br><br>
+          
+          <div class="button-grid"> <!-- New container for buttons -->
+      <button class="grid-button discount-get">Seek Services</button>
+      <button class="grid-button discount-offer">Offer Discount</button>
+    </div><br>
+          
+          <!-- New Section for Top Services -->
+    <div class="testimonials-carousel">
+  <div class="testimonial-item active">
+    <p>"This service saved me a lot of money! Highly recommend."</p>
+    <p>- Mrs. Wura</p>
+  </div>
+  <!-- Add more testimonials as needed -->
+  <div class="testimonial-controls">
+    <button class="prev-testimonial">Prev</button>
+    <button class="next-testimonial">Next</button>
+  </div>
+</div>
+  
+          
+      </form>
+    </div>
+  </div>
+</div>
+        
+        
+        
+        
+        
+        <!-- Additional content could go here -->
+    </div>
+    <div class="item item5">
+        <footer>
+            Social Media: 
+            <a href="https://www.facebook.com/idowuayeni">Facebook</a>, 
+            <a href="https://www.twitter.com/idowuayeni">Twitter</a>
+            <br>
+            &copy; Copyright By: Idowu Ayeni
+            <br>
+            <a href="Privacy.html">Privacy</a>
+        </footer>
+    </div>
+</div>
+
+<script src= "jsfiles/jhjjjnkj.js"></script>
+
+</body>
+</html>

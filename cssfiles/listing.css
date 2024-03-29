@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header input[type="search"] {
+    margin-top: 10px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.popular-services, .testimonials {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.menu-grid {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.categories {
+    list-style-type: none;
+    padding: 0;
+}
+
+.categories > li {
+    background-color: #f4f4f4;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sub-categories {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    display: none; /* Initially hide sub-categories */
+}
+
+.sub-categories li a {
+    display: block;
+    padding: 5px 0;
+    color: #333;
+    text-decoration: none;
+}
+
+.sub-categories li a:hover {
+    text-decoration: underline;
+}

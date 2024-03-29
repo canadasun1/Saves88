@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>requestform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cssfiles/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 20px;
+            max-width: 80%;
+            margin: auto;
+        }
+
+       .container {
+    background-color:  #a6cbb4;
+    padding: 20px;
+    margin: auto;
+    max-width: 600px;
+    border-radius: 8px;
+           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        @media screen and (min-width: 768px) {
+            .grid-container {
+               
+               
+            }
+            .container {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+}
+ 
+            
+        img {
+    max-width: 100%;
+    height: auto;
+}
+
+        }
+
+           input[type=text], input[type=number] input[type=datetime-local], textarea, select {
+            width: 100%;
+            padding: 10px;
+             margin: 10px 0 20px;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+           input[type=text]:focus, input[type=number]:focus,select:focus input[type=datetime-local]:focus, textarea:focus  {
+    background-color: dodgerblue;
+    box-shadow: 0 0 8px rgba(30, 140, 190, .3);
+}
+           
+
+        button {
+            background-color: dodgerblue;
+            color: white;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #1b8ec7;
+        }
+
+      
+label {
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 15px;
+           label, select, input, textarea, button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        @media screen and (max-width: 600px) {
+            .signupbtn, .cancelbtn {
+                width: 100%;
+            }
+        }
+
+    </style>
+
+    
+</head>
+    
+<body>
+<div class="container">
+    <h1>Service Request Form</h1>
+    <p>Please fill in this form to request a service.</p>
+    <hr>
+    
+    
+    
+    <form id="serviceRequestForm" action="/submit_service_request.php" method="POST">
+        
+       
+         <label for="name"><b>Full Name</b></label>
+        <input type="text" placeholder="Enter Your Name" name="name" id="name" required>
+        
+        <select name="serviceCategory" id="serviceCategory" required onchange="updateSubcategories()">
+            <option value="">Select a Category</option>
+            <option value="homeServices">Home Services</option>
+            <!-- Add more categories as needed -->
+        </select>
+
+       <label for="serviceSubCategory"><b>Service Sub-Category</b></label>
+<input type="text" placeholder="Optional" name="serviceSubCategory" id="serviceSubCategory">
+        
+        
+        <label for="currency"><b>Currency</b></label>
+        <select name="currency" id="currency" required>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <!-- Add more currencies as needed -->
+        </select>
+
+        <label for="regularPrice"><b>Regular Price</b></label>
+        <input type="number" placeholder="Enter Regular Price" name="regularPrice" id="regularPrice" required>
+
+        <label for="desiredPrice"><b>Desired Price</b></label>
+        <input type="number" placeholder="Enter Desired Price" name="desiredPrice" id="desiredPrice" required>
+
+        <label for="location"><b>Location</b></label>
+        <input type="text" placeholder="Enter Location" name="location" id="location" required>
+
+        <label for="serviceSchedule"><b>Service Schedule</b></label>
+        <input type="datetime-local" name="serviceSchedule" id="serviceSchedule" required>
+
+        <label for="extraInfo"><b>Conditions or Extra Info</b></label>
+        <textarea placeholder="Enter any specific conditions or additional information here..." name="extraInfo" id="extraInfo"></textarea>
+
+        <div class="clearfix">
+            <button type="submit" class="submitBtn">Submit Request</button>
+        </div>
+    </form>
+</div>
+<script src=  "jsfiles/requstform.js"></script>
+    
+    
+    
+    
+
+    <script>
+    function calculateDiscount() {
+        const regularPrice = document.getElementById('regularPrice').value;
+        const desiredPrice = document.getElementById('desiredPrice').value;
+        if (regularPrice && desiredPrice) {
+            const discountPercentage = 100 - ((desiredPrice / regularPrice) * 100);
+            document.getElementById('discountPercentage').value = discountPercentage.toFixed(2) + '%';
+        }
+    }
+</script>
+</body>
+</html>

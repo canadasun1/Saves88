@@ -1,0 +1,203 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SaveMoney</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="cssfiles/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        
+        :root {
+            --background-color: #ffffff;
+            --text-color: #000;
+            --primary-color:  #6c757d;
+            --secondary-color: #6c757d;
+            --accent-color: #007bff;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            
+            body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding-top: 20px;
+}
+.container {
+    max-width: 768px;
+    margin: auto;
+    padding: 15px;
+    background: rgba(19, 36, 64, 0);
+    box-shadow: 0 0 15px #ffffff;
+            
+        }
+
+        .grid-container {
+            display: grid;
+            gap: 20px;
+            grid-template-areas:
+                'header'
+                'main'
+                'footer';
+        }
+
+        @media screen and (min-width: 768px) {
+            .grid-container {
+                grid-template-columns:  1fr;
+                grid-template-areas:
+                    'header'
+                    'main'
+                    'footer';
+            }
+
+            .header, .footer {
+    text-align: center;
+    padding: 20px 0;
+}
+            
+        img {
+    max-width: 100%;
+    height: auto;
+}
+
+        .item {
+            padding: 20px;
+            background-color: #78e5aa;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+        }
+
+        .item1 { grid-area: header; }
+            .item3 { grid-area: main;}
+         .item5 { grid-area: footer; background-color: #b2dec6; }
+
+        header, footer {
+            text-align: center;
+            color: var(--primary-color);
+        }
+            
+
+    a, .btn-primary {
+    background-color: #78e5aa;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+a:hover, .btn-primary:hover {
+    background-color: #66cc94;
+
+    .faq-section h1 {
+    margin-bottom: 20px;
+}
+
+.faq {
+    background-color: var(--background-color);
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.faq h2 {
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+.faq p {
+    line-height: 1.6;
+
+}
+            
+           
+        
+    </style>
+</head>
+    <body>
+
+<div class="grid-container">
+    
+    
+    <div class="item item1">
+        
+        <nav class="navbar">
+            <div class="logo">
+    <a href= "hero.html">
+        <img src= "image/saveslogo.JPG" alt="Cool Logo" width="70" height="50">
+    </a>
+            </div>
+
+        
+            
+          
+           <ul class="nav-links">
+  <li><a href=  "index.html">Home</a></li>
+    <li><a href="aboutus.html">About US</a></li> <!-- Corrected -->
+    <li><a href=  "services.html">Services</a></li> 
+    <li><a href="contactus.html">Contact US</a></li> 
+     <li><a href=  "faq.html">FAQs</a></li>
+</ul>
+     <img src=  "image/handhske.PNG"height="100px"width="100px">
+
+        </nav>
+    </div>
+    
+    
+
+<div class="item item3">
+   <div class="container">
+   <!-- FAQ Section -->
+<div class="container faq-section">
+    <h1>Frequently Asked Questions</h1>
+    
+    <section class="faq">
+        <h2>What is Save$?</h2>
+        <p>Save$ is a community-driven platform designed to connect individuals seeking affordable services with those who can offer these services at competitive prices. Our goal is to help users save money by fostering a marketplace of cost-effective services.</p>
+    </section>
+
+    <section class="faq">
+        <h2>How can I offer a service on Save$?</h2>
+        <p>To offer a service, simply register on our platform, create a service listing with a detailed description, pricing, and availability. Ensure your service is priced competitively to attract users seeking affordable options.</p>
+    </section>
+
+    <section class="faq">
+        <h2>How do I find services on Save$?</h2>
+        <p>Browse our platform for the services you need, compare prices, read reviews, and choose the best offer that fits your budget. You can directly contact service providers through our platform to discuss further details.</p>
+    </section>
+
+    <section class="faq">
+        <h2>Is there a fee to use Save$?</h2>
+        <p>Save$ is free to join and search for services. We believe in making services more accessible and affordable. However, specific services may have fees set by the service providers.</p>
+    </section>
+
+    <section class="faq">
+        <h2>How does Save$ ensure the quality of services?</h2>
+        <p>We encourage our community to leave honest reviews and ratings after each service transaction. This feedback system helps ensure high-quality services and accountability among service providers.</p>
+    </section>
+
+    <section class="faq">
+        <h2>What should I do if I have a problem with a service?</h2>
+        <p>If you encounter any issues with a service obtained through Save$, please contact the service provider directly to resolve the matter. If the issue persists, you can reach out to our support team for assistance.</p>
+    </section>
+</div>
+       
+</div><br><br>
+
+<div class="item item5">
+   footer
+    <div class="footer">
+        <p>© 2024 Save$. All rights reserved.</p>
+    </div>
+</div>

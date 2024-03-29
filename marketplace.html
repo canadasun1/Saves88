@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Marketplace - Save$</title>
+    <link rel="stylesheet" href= "cssfiles/marketplace.css">
+    
+    <style>
+    
+    
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+        
+        .contact-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background-color: #0056b3;
+}
+
+.service-marketplace {
+    background-color: #c0f2db;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+      display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.service-listing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+     border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+}
+
+.service-provider-img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.service-info h3 {
+    margin-top: 0;
+}
+
+.description {
+    color: #666;
+}
+
+.rating {
+    color: gold;
+    margin-bottom: 10px;
+}
+        
+        offer {
+  border-color: green;
+}
+
+.request {
+  border-color: blue;
+    
+}
+
+    
+    
+    </style>
+</head>
+<body>
+    
+    <!-- Filter options here -->
+  <select id="category-filter">
+    <option value="all">All Categories</option>
+    <option value="haircuts">Haircuts</option>
+    <option value="styling">Styling</option>
+    <!-- Add more categories as needed -->
+  </select>
+    
+      <h2>Marketplace Listings</h2>
+<div class="service-marketplace">
+    <!-- Service Offer Listing -->
+    <div class="service-listing">
+        <div class="service-info">
+            <h3>Residential Cleaning</h3>
+            <p>Offered by Jane Doe</p>
+            <p><strong>Regular Price:</strong> $100</p>
+            <p><strong>Discount Offered:</strong> $80</p>
+            <p><strong>Discount:</strong> 20%</p>
+            <p><strong>Schedule:</strong> Mondays, 10am - 2pm</p>
+            <p><strong>Location:</strong> Downtown</p>
+            <p><strong>Experience:</strong> 5 years</p>
+            <div class="rating">
+                ★★★★☆
+            </div>
+            <p class="description">A comprehensive cleaning service for your home. Save 20% every session.</p>
+        </div>
+    </div>
+
+    <!-- Service Request Listing -->
+    <div class="service-listing">
+        <div class="service-info">
+            <h3>Haircut for Kids</h3>
+            <p>Requested by Mary Doe</p>
+            <p><strong>Regular Price:</strong> $30 per session</p>
+            <p><strong>Discount Sought:</strong> Looking for offers under $20</p>
+            <p><strong>Schedule:</strong> Flexible, prefer weekends</p>
+            <p><strong>Location:</strong> Suburban Area</p>
+            <p class="description">Seeking a more affordable haircut service for my kids, willing to negotiate schedule.</p>
+        </div>
+    </div>
+
+    <!-- Repeat the div.service-listing block for each service, alternating between offer and request as appropriate -->
+</div>
+    
+    <div class="item item3">
+  
+   
+</div>
+
+</body>
+    
+    <script src=  "jsfiles/marketplace.js"></script> 
+</html>
